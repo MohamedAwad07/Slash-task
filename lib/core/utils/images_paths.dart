@@ -22,6 +22,8 @@ class ImagePaths {
 
   static String horizontalSlider = '$imagePath/Horizontal-Slider.png';
 
-// Home Page images
- 
+  static String hotDeal1 = '$imagePath/Hot Deal 1.png';
+
+  static String hotDeal2 = '$imagePath/Hot Deal 2.jpg';
+
 }
