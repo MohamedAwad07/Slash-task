@@ -11,22 +11,25 @@ List<String> hotDealImagePaths = [
   ImagePaths.hotDeal2,
 ];
 Widget buildHotDealsSection() {
-  return CarouselSlider.builder(
-    options: CarouselOptions(
-      height: 132,
-      initialPage: 0,
-      autoPlay: true,
-      viewportFraction: 1.0,
-      enableInfiniteScroll: false,
-      scrollDirection: Axis.horizontal,
-      onPageChanged: (index, reason) {
-        currentIndex = index;
+  return Padding(
+    padding: const EdgeInsets.only(right: 17, left: 10),
+    child: CarouselSlider.builder(
+      options: CarouselOptions(
+        height: 132,
+        initialPage: 0,
+        autoPlay: true,
+        viewportFraction: 1.0,
+        enableInfiniteScroll: false,
+        scrollDirection: Axis.horizontal,
+        onPageChanged: (index, reason) {
+          currentIndex = index;
+        },
+      ),
+      itemCount: 2,
+      itemBuilder: (context, index, realIndex) {
+        return hotDealItem(imagePath: hotDealImagePaths[index]);
       },
     ),
-    itemCount: 2,
-    itemBuilder: (context, index, realIndex) {
-      return hotDealItem(imagePath: hotDealImagePaths[index]);
-    },
   );
 }
 
@@ -38,7 +41,7 @@ Widget hotDealItem({required String imagePath}) {
         imagePath,
       ),
       height: 132,
-      width: 327,
+      width: 320,
     ),
   );
 }

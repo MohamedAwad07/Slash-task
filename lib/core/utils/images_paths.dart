@@ -26,4 +26,14 @@ class ImagePaths {
 
   static String hotDeal2 = '$imagePath/Hot Deal 2.jpg';
 
+  static String seeAllButton = '$imagePath/see all button.png';
+
+  static String category1 = '$imagePath/Category1.png';
+
+  static String category2 = '$imagePath/Category2.png';
+
+  static String category3 = '$imagePath/Category3.png';
+
+  static String category4 = '$imagePath/Category4.png';
+
 }
