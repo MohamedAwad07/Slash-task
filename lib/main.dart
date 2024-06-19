@@ -10,10 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "Slash home page",
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        print(constraints.minWidth.toInt());
+        return const MaterialApp(
+          title: "Slash home page",
+          debugShowCheckedModeBanner: false,
+          home: HomePage(),
+        );
+      },
     );
   }
 }
