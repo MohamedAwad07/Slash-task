@@ -18,6 +18,10 @@ class ImagePaths {
 
   static String ellipse = '$imagePath/Ellipse 88.png';
 
+  static String search = '$imagePath/search-normal.png';
+
+  static String horizontalSlider = '$imagePath/Horizontal-Slider.png';
+
 // Home Page images
  
 }

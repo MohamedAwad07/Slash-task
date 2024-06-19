@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import '../../../core/utils/images_paths.dart';
 import '../models/bottom_bar_model.dart';
 
 class CustomBottomBar extends StatefulWidget {
@@ -11,35 +10,9 @@ class CustomBottomBar extends StatefulWidget {
   @override
   State<CustomBottomBar> createState() => _CustomBottomBarState();
 }
+
 class _CustomBottomBarState extends State<CustomBottomBar> {
   int selectedIndex = 0;
-
-  List<BottomBarModel> bottomMenuList = [
-    BottomBarModel(
-      icon: ImagePaths.bottomBarHome,
-      activeIcon: ImagePaths.bottomBarHome,
-      title: "Home",
-      type: BottomBarEnum.Home,
-    ),
-    BottomBarModel(
-      icon: ImagePaths.bottomBarFavorites,
-      activeIcon: ImagePaths.bottomBarFavorites,
-      title: "Favorites",
-      type: BottomBarEnum.Favorites,
-    ),
-    BottomBarModel(
-      icon: ImagePaths.bottomBarMyCart,
-      activeIcon: ImagePaths.bottomBarMyCart,
-      title: "My Cart",
-      type: BottomBarEnum.MyCart,
-    ),
-    BottomBarModel(
-      icon: ImagePaths.bottomBarProfile,
-      activeIcon: ImagePaths.bottomBarProfile,
-      title: "Profile",
-      type: BottomBarEnum.Profile,
-    )
-  ];
 
   @override
   Widget build(BuildContext context) {

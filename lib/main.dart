@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'features/home/home_page.dart';
 
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        print(constraints.minWidth.toInt());
+        if (kDebugMode) {
+          print(constraints.minWidth.toInt());
+        }
         return const MaterialApp(
           title: "Slash home page",
           debugShowCheckedModeBanner: false,
