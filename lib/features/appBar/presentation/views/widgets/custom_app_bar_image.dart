@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../core/utils/images_paths.dart';
+import 'package:slash_task/core/utils/images_paths.dart';
 // ignore_for_file: must_be_immutable
 
 class AppBarTitleImage extends StatelessWidget {

@@ -1,4 +1,6 @@
-import '../../../core/utils/images_paths.dart';
+
+
+import '../../../../core/utils/images_paths.dart';
 
 class CategorySection {
   late String imagePath;

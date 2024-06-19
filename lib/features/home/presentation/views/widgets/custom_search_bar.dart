@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../core/utils/images_paths.dart';
+
+import '../../../../../core/utils/images_paths.dart';
 
 TextEditingController controller = TextEditingController();
 Widget buildSearchBar(BuildContext context) {

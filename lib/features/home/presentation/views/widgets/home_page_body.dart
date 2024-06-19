@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../presentation/views/widgets/custom_category_section_body.dart';
-import '../presentation/views/widgets/custom_header_section.dart';
-import '../presentation/views/widgets/custom_hot_deal_widget.dart';
-import '../presentation/views/widgets/custom_search_bar.dart';
+import 'custom_category_section_body.dart';
+import 'custom_header_section.dart';
+import 'custom_hot_deal_widget.dart';
+import 'custom_search_bar.dart';
 
 Widget homePageBody(BuildContext context) {
   return Padding(

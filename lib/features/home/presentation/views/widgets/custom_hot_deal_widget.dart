@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:slash_task/core/utils/images_paths.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../core/utils/images_paths.dart';
 
 int currentIndex = 0;
 

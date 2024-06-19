@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:slash_task/features/appBar/presentation/views/widgets/custom_app_bar.dart';
 import '../../core/utils/images_paths.dart';
-import 'widgets/custom_app_bar.dart';
-import 'widgets/custom_app_bar_image.dart';
-import 'widgets/custom_app_bar_title.dart';
+import 'presentation/views/widgets/custom_app_bar_image.dart';
+import 'presentation/views/widgets/custom_app_bar_title.dart';
 
 PreferredSizeWidget buildAppBar(BuildContext context) {
   return CustomAppBar(

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../data/models/bottom_bar_model.dart';
+import '../../../data/models/bottom_bar_model.dart';
 
 class CustomBottomBar extends StatefulWidget {
   CustomBottomBar({super.key});

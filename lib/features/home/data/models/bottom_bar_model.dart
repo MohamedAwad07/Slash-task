@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
-import '../../../core/utils/images_paths.dart';
+
+import '../../../../core/utils/images_paths.dart';
 
 enum BottomBarEnum { Home, Favorites, MyCart, Profile }
 class BottomBarModel {

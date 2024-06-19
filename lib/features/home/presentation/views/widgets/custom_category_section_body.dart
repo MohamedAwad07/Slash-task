@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../models/category_section_model.dart';
+import 'package:slash_task/features/home/data/models/category_section_model.dart';
 import 'custom_category_item.dart';
 
 Widget buildCategorySection() {

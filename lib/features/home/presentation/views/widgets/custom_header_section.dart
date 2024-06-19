@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/images_paths.dart';
+import '../../../../../core/utils/images_paths.dart';
 
 Widget buildSectionsHeader({required String headerName}) {
   return SizedBox(
