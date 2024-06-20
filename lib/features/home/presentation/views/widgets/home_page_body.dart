@@ -18,10 +18,8 @@ Widget homePageBody(BuildContext context, DummyData data) {
           children: [
             buildSearchBar(context),
             const SizedBox(height: 20),
-            buildHotDealsSection(),
+            const HotDealsSection(),
             const SizedBox(height: 14),
-            dots(),
-            const SizedBox(height: 28),
             buildSectionsHeader(headerName: "Categories"),
             const SizedBox(height: 16),
             buildCategorySection(),

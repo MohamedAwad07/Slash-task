@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 
-
 class Product {
   final int id;
   final String name;
@@ -44,16 +43,15 @@ class DummyData {
   }
 }
 
-const String dummyDataLink = "https://drive.google.com/uc?export=download&id=1qmGa3jeCwJBdtfHp9vWVvuP6r8X3Glg8" ;
+const String dummyDataLink = "https://drive.google.com/uc?export=download&id=1qmGa3jeCwJBdtfHp9vWVvuP6r8X3Glg8";
 
-Future<DummyData> fetchDummyData() async {
+Future<DummyData?> fetchDummyData() async {
   final dio = Dio();
   final response = await dio.get(dummyDataLink);
 
   if (response.statusCode == 200) {
     final jsonResponse = json.decode(response.data);
     return DummyData.fromJson(jsonResponse);
-  } else {
-    throw Exception('Failed to load dummy data');
   }
+  return null;
 }

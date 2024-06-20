@@ -1,21 +1,21 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 class DefaultWidget extends StatelessWidget {
-  const DefaultWidget({super.key});
-
+  const DefaultWidget({super.key, required this.content});
+  final String content;
   @override
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xffffffff),
       padding: const EdgeInsets.all(10),
-      child: const Center(
+      child: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Please replace the respective Widget here',
-              style: TextStyle(
+              content,
+              style: const TextStyle(
                 fontSize: 18,
               ),
             )
@@ -25,3 +25,4 @@ class DefaultWidget extends StatelessWidget {
     );
   }
 }
+

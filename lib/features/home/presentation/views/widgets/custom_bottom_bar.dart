@@ -1,107 +1,102 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_cubit.dart';
+import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_state.dart';
 import '../../../data/models/bottom_bar_model.dart';
 
-class CustomBottomBar extends StatefulWidget {
-  CustomBottomBar({super.key});
+class CustomBottomBar extends StatelessWidget {
+  final HomePageCubit cubit;
 
-  Function(BottomBarEnum)? onChanged;
-  @override
-  State<CustomBottomBar> createState() => _CustomBottomBarState();
-}
-
-class _CustomBottomBarState extends State<CustomBottomBar> {
-  int selectedIndex = 0;
+  const CustomBottomBar({
+    super.key,
+    required this.cubit,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(
-          8,
-        ),
-      ),
-      child: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        selectedFontSize: 0,
-        elevation: 0,
-        currentIndex: selectedIndex,
-        type: BottomNavigationBarType.fixed,
-        items: List.generate(bottomMenuList.length, (index) {
-          return BottomNavigationBarItem(
-            icon: SizedBox(
-              width: 54,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image(
-                    image: AssetImage(
-                      bottomMenuList[index].icon,
-                    ),
-                    height: 30,
-                    width: double.maxFinite,
-                    color: Colors.grey[900],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4),
-                    child: Text(
-                      bottomMenuList[index].title ?? "",
-                      style: TextStyle(
+    return BlocConsumer<HomePageCubit, HomePageCubitState>(
+      bloc: cubit,
+      listener: (context, state) {},
+      builder: (context, state) {
+        return Container(
+          height: 80,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: BottomNavigationBar(
+            backgroundColor: Colors.transparent,
+            showSelectedLabels: true,
+            showUnselectedLabels: true,
+            selectedFontSize: 0,
+            elevation: 0,
+            currentIndex: cubit.selectedIndex,
+            type: BottomNavigationBarType.fixed,
+            items: List.generate(bottomMenuList.length, (index) {
+              return BottomNavigationBarItem(
+                icon: SizedBox(
+                  width: double.maxFinite,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage(bottomMenuList[index].icon),
+                        height: 30,
+                        width: double.maxFinite,
                         color: Colors.grey[900],
-                        fontSize: 14,
-                        fontFamily: 'Urbanist',
-                        fontWeight: FontWeight.w400,
                       ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            activeIcon: SizedBox(
-              width: 36,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image(
-                    image: AssetImage(
-                      bottomMenuList[index].activeIcon,
-                    ),
-                    height: 30,
-                    width: double.maxFinite,
-                    color: Colors.grey[900],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Text(
+                          bottomMenuList[index].title ?? "",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4),
-                    child: Text(
-                      bottomMenuList[index].title ?? "",
-                      style: TextStyle(
+                ),
+                activeIcon: SizedBox(
+                  width: 36,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image(
+                        image: AssetImage(bottomMenuList[index].activeIcon),
+                        height: 30,
+                        width: double.maxFinite,
                         color: Colors.grey[900],
-                        fontSize: 14,
-                        fontFamily: 'Urbanist',
-                        fontWeight: FontWeight.w700,
                       ),
-                    ),
-                  )
-                ],
-              ),
-            ),
-            label: '',
-          );
-        }),
-        onTap: (index) {
-          selectedIndex = index;
-          widget.onChanged?.call(bottomMenuList[index].type);
-          setState(() {});
-        },
-      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 4),
+                        child: Text(
+                          bottomMenuList[index].title ?? "",
+                          style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 14,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                label: '',
+              );
+            }),
+            onTap: (index) {
+              cubit.changeIndex(index);
+            },
+          ),
+        );
+      },
     );
   }
 }
