@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
-
 class AppBarTitle extends StatelessWidget {
   AppBarTitle({super.key, required this.text, this.margin, this.onTap});
 
@@ -24,11 +22,11 @@ class AppBarTitle extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-          color: Colors.grey[900],
-          fontSize: 20,
-          fontFamily: 'Urbanist',
-          fontWeight: FontWeight.w700,
-        ),
+            color: Colors.grey[900],
+            fontSize: 20,
+            fontFamily: 'Urbanist',
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
     );

@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:slash_task/features/home/data/models/dummy%20data%20models/dummyDataModel.dart';
 import 'features/home/home_page.dart';
 
 void main() {
+  print(fetchDummyData());
   runApp(const MyApp());
 }
 

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:slash_task/core/utils/images_paths.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-
 int currentIndex = 0;
 
 List<String> hotDealImagePaths = [

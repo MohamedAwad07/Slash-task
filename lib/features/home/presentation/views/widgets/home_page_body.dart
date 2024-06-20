@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import '../../../data/models/dummy data models/dummyDataModel.dart';
+import 'custom_best_selling_section.dart';
 import 'custom_category_section_body.dart';
 import 'custom_header_section.dart';
 import 'custom_hot_deal_widget.dart';
 import 'custom_search_bar.dart';
 
-Widget homePageBody(BuildContext context) {
+Widget homePageBody(BuildContext context, DummyData data) {
   return Padding(
     padding: const EdgeInsets.only(top: 12),
     child: SingleChildScrollView(
@@ -23,10 +25,17 @@ Widget homePageBody(BuildContext context) {
             buildSectionsHeader(headerName: "Categories"),
             const SizedBox(height: 16),
             buildCategorySection(),
-            // const SizedBox(height: 28),
-            // buildBestSellingSection(context),
-            // const SizedBox(height: 34),
-            // buildMainContent(context)
+            buildSectionsHeader(headerName: "Best Selling"),
+            const SizedBox(height: 15),
+            buildProductSection(data, "Best Selling"),
+            const SizedBox(height: 10),
+            buildSectionsHeader(headerName: "New Arrival"),
+            const SizedBox(height: 15),
+            buildProductSection(data, "New Arrival"),
+            const SizedBox(height: 10),
+            buildSectionsHeader(headerName: "Recommended for you"),
+            const SizedBox(height: 15),
+            buildProductSection(data, "RecommendedForYou"),
           ],
         ),
       ),

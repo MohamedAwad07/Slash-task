@@ -8,7 +8,9 @@ Widget buildSectionsHeader({required String headerName}) {
     child: Align(
       alignment: Alignment.topCenter,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.only(
+          left: 24,
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
@@ -17,7 +19,7 @@ Widget buildSectionsHeader({required String headerName}) {
               headerName,
               style: TextStyle(
                 color: Colors.grey[900],
-                fontSize: 22,
+                fontSize: 20,
                 fontFamily: 'Urbanist',
                 fontWeight: FontWeight.w600,
               ),
@@ -32,15 +34,11 @@ Widget buildSectionsHeader({required String headerName}) {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: IconButton(
-                iconSize: 20,
-                //  padding: const EdgeInsets.all(2),
-                onPressed: () {},
-                icon: Image(
-                  image: AssetImage(ImagePaths.seeAllButton),
-                ),
+            IconButton(
+              iconSize: 20,
+              onPressed: () {},
+              icon: Image(
+                image: AssetImage(ImagePaths.seeAllButton),
               ),
             )
           ],

@@ -36,4 +36,30 @@ class ImagePaths {
 
   static String category4 = '$imagePath/Category4.png';
 
+
+  static String bestSeller1 = '$imagePath/Best_Seller_1.png';
+  static String bestSeller2 = '$imagePath/Best_Seller_2.png';
+  static String bestSeller3 = '$imagePath/Best_Seller_3.png';
+  static String bestSeller4 = '$imagePath/Best_Seller_4.png';
+  static String bestSeller5 = '$imagePath/Best_Seller_5.png';
+
+
+  static String newArrival1 = '$imagePath/new_arrival_1.png';
+  static String newArrival2 = '$imagePath/new_arrival_2.png';
+  static String newArrival3 = '$imagePath/new_arrival_3.png';
+  static String newArrival4 = '$imagePath/new_arrival_4.png';
+  static String newArrival5 = '$imagePath/new_arrival_5.png';
+
+
+  static String recommended1 = '$imagePath/recommended_1.png';
+  static String recommended2 = '$imagePath/recommended_2.png';
+  static String recommended3 = '$imagePath/recommended_3.png';
+  static String recommended4 = '$imagePath/recommended_4.png';
+  static String recommended5 = '$imagePath/recommended_5.png';
+
+
+  static String logo1 = '$imagePath/logo_1.png';
+  static String logo2 = '$imagePath/logo_2.png';
+  static String plusLogo = '$imagePath/plus_logo.png';
+  static String loveLogo = '$imagePath/love_logo.png';
 }

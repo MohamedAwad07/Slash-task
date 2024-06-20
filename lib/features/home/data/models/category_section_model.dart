@@ -1,5 +1,3 @@
-
-
 import '../../../../core/utils/images_paths.dart';
 
 class CategorySection {
@@ -25,7 +23,7 @@ List<CategorySection> categorySectionList = [
     imagePath: ImagePaths.category4,
     label: "Books",
   ),
- CategorySection(
+  CategorySection(
     imagePath: ImagePaths.category1,
     label: "Fashion",
   ),

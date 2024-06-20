@@ -16,7 +16,8 @@ Widget buildSearchBar(BuildContext context) {
           child: SizedBox(
             width: double.maxFinite,
             child: TextFormField(
-              scrollPadding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+              scrollPadding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom),
               controller: controller,
               // focusNode: focus,
               style: TextStyle(
