@@ -15,7 +15,7 @@ Widget buildProductSection(DummyData data, String categoryKind) {
             width: 12,
           );
         },
-        itemCount: data.bestSelling.length,
+        itemCount: 5,
         itemBuilder: (context, index) {
           if (categoryKind == "Best Selling") {
             return productItem(data.bestSelling[index]);

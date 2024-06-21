@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-
 class Product {
   final int id;
   final String name;
@@ -18,6 +17,7 @@ class Product {
     );
   }
 }
+
 class DummyData {
   final List<Product> bestSelling;
   final List<Product> newArrival;
@@ -51,6 +51,6 @@ Future<DummyData?> fetchDummyData() async {
   if (response.statusCode == 200) {
     final jsonResponse = json.decode(response.data);
     return DummyData.fromJson(jsonResponse);
-  }
+  } 
   return null;
 }
