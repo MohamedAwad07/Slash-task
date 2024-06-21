@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:slash_task/features/home/presentation/views/widgets/custom_image.dart';
 
 Widget categoryItem({required String label, required String imagePath}) {
   return Column(
     children: [
       Container(
-        width: 64,
-        height: 64,
+        width: 68,
+        height: 68,
         decoration: BoxDecoration(
           color: Colors.grey[850],
-          borderRadius: BorderRadius.circular(32),
+          borderRadius: BorderRadius.circular(34),
         ),
-        child: Image(
-          width: 25,
-          height: 19,
-          image: AssetImage(
-            imagePath,
-          ),
-        ),
+        child: customImage(imagePath: imagePath, height: 20, width: 20),
       ),
       const SizedBox(
-        height: 5,
+        height: 6,
       ),
       Text(
         label,

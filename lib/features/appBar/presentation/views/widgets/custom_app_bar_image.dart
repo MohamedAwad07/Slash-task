@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:slash_task/core/utils/images_paths.dart';
+import '../../../../../core/utils/images_paths.dart';
 // ignore_for_file: must_be_immutable
 
 class AppBarTitleImage extends StatelessWidget {
@@ -17,7 +17,6 @@ class AppBarTitleImage extends StatelessWidget {
       child: Image(
         image: AssetImage(ImagePaths.appBarLocation),
         height: 30,
-        //width: double.maxFinite,
         color: Colors.grey[900],
       ),
     );

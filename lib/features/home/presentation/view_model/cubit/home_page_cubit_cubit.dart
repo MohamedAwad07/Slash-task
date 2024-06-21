@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:slash_task/features/home/presentation/views/widgets/default_widget.dart';
-import 'package:slash_task/features/home/presentation/views/widgets/home_fetch_data.dart';
+import '../../../../../core/utils/images_paths.dart';
+import '../../views/widgets/default_widget.dart';
+import '../../views/widgets/home_fetch_data.dart';
 import 'home_page_cubit_state.dart';
 
 class HomePageCubit extends Cubit<HomePageCubitState> {
@@ -27,6 +28,11 @@ class HomePageCubit extends Cubit<HomePageCubitState> {
     selectedIndex = index;
     emit(BottomNavBarChangeState());
   }
+
+    List<String> hotDealImagePaths = [
+    ImagePaths.hotDeal1,
+    ImagePaths.hotDeal2,
+  ];
 
   void changeDot(int index) {
     currentHotDealIndex = index;

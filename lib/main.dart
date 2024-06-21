@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:slash_task/features/home/presentation/view_model/cubit/home_page_cubit_cubit.dart';
 import 'features/home/home_page.dart';
+import 'features/home/presentation/view_model/cubit/home_page_cubit_cubit.dart';
 import 'observer.dart';
 
 void main() {

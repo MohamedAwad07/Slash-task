@@ -6,15 +6,16 @@ Widget buildCategorySection() {
   return Padding(
     padding: const EdgeInsets.only(
       left: 24,
+      right: 12,
     ),
     child: SizedBox(
-      height: 110,
+      height: 100,
       width: double.maxFinite,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         separatorBuilder: (context, index) {
           return const SizedBox(
-            width: 10,
+            width: 8,
           );
         },
         itemCount: categorySectionList.length,

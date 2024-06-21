@@ -1,22 +1,16 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:flutter/material.dart';
 
 class AppBarTitle extends StatelessWidget {
-  AppBarTitle({super.key, required this.text, this.margin, this.onTap});
+  const AppBarTitle({super.key, required this.text, this.margin});
 
-  String text;
+  final String text;
 
-  EdgeInsetsGeometry? margin;
-
-  Function? onTap;
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        onTap?.call();
-      },
+      onTap: () {},
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
         child: Text(

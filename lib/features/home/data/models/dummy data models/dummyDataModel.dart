@@ -18,7 +18,6 @@ class Product {
     );
   }
 }
-
 class DummyData {
   final List<Product> bestSelling;
   final List<Product> newArrival;
