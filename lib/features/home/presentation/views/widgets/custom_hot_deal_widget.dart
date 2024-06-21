@@ -4,8 +4,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_task/core/utils/images_paths.dart';
-import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_cubit.dart';
-import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_state.dart';
+import 'package:slash_task/features/home/presentation/view_model/cubit/home_page_cubit_cubit.dart';
+import 'package:slash_task/features/home/presentation/view_model/cubit/home_page_cubit_state.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HotDealsSection extends StatefulWidget {

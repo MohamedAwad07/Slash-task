@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_cubit.dart';
-import 'package:slash_task/features/home/presentation/view_model/home%20cubit/cubit/home_page_cubit_state.dart';
+import 'package:slash_task/features/home/presentation/view_model/cubit/home_page_cubit_cubit.dart';
+import 'package:slash_task/features/home/presentation/view_model/cubit/home_page_cubit_state.dart';
 import '../appBar/app_bar_view.dart';
 import 'presentation/views/widgets/custom_bottom_bar.dart';
 
