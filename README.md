@@ -11,7 +11,7 @@ Slash home page management utilizes the following:
 • Dio package for API services <br>
 • Responsive design for both mobile and web platforms  <br>
 
-#files structure 
+#files structure  <br>
 Slash-task/ <br>
 ├── android/<br>
 ├── ios/<br>
