@@ -17,55 +17,56 @@ Slash-task/
 ├── android/
 ├── ios/
 ├── assets/
-│ ├── fonts/
-│ ├── images/
+│   ├── fonts/
+│   ├── images/
 ├── lib/
-│ ├── core/
-│ │ ├── errors/
-│ │ │ ├── failures.dart
-│ │ ├── utils/
-│ │ │ ├── images_paths.dart
-│ │ ├── routes/
-│ │ │ ├── app_routes.dart
-│ │ ├── theme/
-│ │ ├── app_theme.dart
-│ ├── features/
-│ │ ├── appBar/
-│ │ │ ├── data/
-│ │ │ │ ├── models/
-│ │ │ ├── presentation/
-│ │ │ │ ├── views/
-│ │ │ │ │ ├── app_bar_view.dart
-│ │ │ │ ├── widgets/
-│ │ │ │ │ ├── custom_app_bar.dart
-│ │ │ │ ├── view_models/
-| | | home/
-│ │ │ ├── data/
-│ │ │ │ ├── models/
-│ │ │ │ │ ├── dummy_data_model.dart
-│ │ │ │ │ ├── bottom_bar_model.dart
-│ │ │ │ │ ├── category_section_model.dart
-│ │ │ ├── presentation/
-│ │ │ │ ├── views/
-│ │ │ │ │ ├── app_bar_view.dart
-│ │ │ │ ├── widgets/
-│ │ │ │ │ ├── hold relative widgets
-│ │ │ │ ├── view_models/
-│ │ │ │ ├── home_cubit.dart
-│ │ │ │ ├── home_states.dart
-│ ├── main.dart
-│ ├── observer.dart
+│   ├── core/
+│   │   ├── errors/
+│   │   │   ├── failures.dart
+│   │   ├── utils/
+│   │   │   ├── images_paths.dart
+│   │   ├── routes/
+│   │   │   ├── app_routes.dart
+│   │   ├── theme/
+│   │       ├── app_theme.dart
+│   ├── features/
+│   │   ├── appBar/
+│   │   │   ├── data/
+│   │   │   │   ├── models/
+│   │   │   ├── presentation/
+│   │   │   │   ├── views/
+│   │   │   │   │   ├── app_bar_view.dart
+│   │   │   │   ├── widgets/
+│   │   │   │   │   ├── custom_app_bar.dart
+│   │   │   │   ├── view_models/
+│   │   ├── home/
+│   │   │   ├── data/
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── dummy_data_model.dart
+│   │   │   │   │   ├── bottom_bar_model.dart
+│   │   │   │   │   ├── category_section_model.dart
+│   │   │   ├── presentation/
+│   │   │   │   ├── views/
+│   │   │   │   │   ├── app_bar_view.dart
+│   │   │   │   ├── widgets/
+│   │   │   │   │   ├── hold_relative_widgets
+│   │   │   │   ├── view_models/
+│   │   │   │       ├── home_cubit.dart
+│   │   │   │       ├── home_states.dart
+│   ├── main.dart
+│   ├── observer.dart
 ├── test/
-│ ├── core/
-│ ├── features/
-│ │ ├── appBar/
-│ │ │ ├── data/
-│ │ │ │ ├── models/
-│ │ │ ├── presentation/
-│ │ │ │ ├── views/
-│ │ │ │ ├── widgets/
-│ │ │ │ ├── view_models/
+│   ├── core/
+│   ├── features/
+│   │   ├── appBar/
+│   │   │   ├── data/
+│   │   │   │   ├── models/
+│   │   │   ├── presentation/
+│   │   │   │   ├── views/
+│   │   │   │   ├── widgets/
+│   │   │   │   ├── view_models/
 ├── pubspec.yaml
+
 
 #Breakpoints
 
