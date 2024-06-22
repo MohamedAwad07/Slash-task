@@ -9,7 +9,9 @@ Slash home page management utilizes the following:
 • MVVM pattern <br>
 • Bloc & Cubit for state management <br>
 • Dio package for API services <br>
-• Responsive design for both mobile and web <br> platforms
+• Responsive design for both mobile and web platforms  <br>
+
+
 Slash-task/ <br>
 ├── android/<br>
 ├── ios/<br>
