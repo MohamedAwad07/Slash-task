@@ -11,33 +11,38 @@ class CustomBottomBar extends StatelessWidget {
   const CustomBottomBar({
     super.key,
     required this.cubit,
+    required this.padding,
   });
+  final double padding;
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<HomePageCubit, HomePageCubitState>(
       bloc: cubit,
       listener: (context, state) {},
       builder: (context, state) {
-        return Container(
-          height: 80,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: BottomNavigationBar(
-            backgroundColor: Colors.transparent,
-            showSelectedLabels: true,
-            showUnselectedLabels: true,
-            selectedFontSize: 0,
-            elevation: 0,
-            currentIndex: cubit.selectedIndex,
-            type: BottomNavigationBarType.fixed,
-            items: List.generate(bottomMenuList.length, (index) {
-              return navBarItem(index: index);
-            }),
-            onTap: (index) {
-              cubit.changeIndex(index);
-            },
+        return Padding(
+          padding: EdgeInsets.symmetric(horizontal: padding),
+          child: Container(
+            height: 80,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: BottomNavigationBar(
+              backgroundColor: Colors.transparent,
+              showSelectedLabels: true,
+              showUnselectedLabels: true,
+              selectedFontSize: 0,
+              elevation: 0,
+              currentIndex: cubit.selectedIndex,
+              type: BottomNavigationBarType.fixed,
+              items: List.generate(bottomMenuList.length, (index) {
+                return navBarItem(index: index);
+              }),
+              onTap: (index) {
+                cubit.changeIndex(index);
+              },
+            ),
           ),
         );
       },

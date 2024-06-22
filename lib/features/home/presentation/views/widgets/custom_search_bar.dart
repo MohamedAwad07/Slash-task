@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:slash_task/core/utils/images_paths.dart';
-import 'package:slash_task/features/home/presentation/views/widgets/custom_image.dart';
-import 'package:slash_task/features/home/presentation/views/widgets/custom_text_form_field.dart';
+import 'custom_image.dart';
+import 'custom_text_form_field.dart';
 
-Widget buildSearchBar(BuildContext context) {
+Widget buildSearchBar(BuildContext context, {double? padding}) {
   return Padding(
-    padding: const EdgeInsets.only(right: 24.0),
+    padding: EdgeInsets.only(
+      right: padding ?? 24.0,
+      left: padding ?? 0,
+    ),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
@@ -17,7 +20,7 @@ Widget buildSearchBar(BuildContext context) {
             ),
             child: SizedBox(
               width: double.maxFinite,
-              child: CustomTextFormFiled(),
+              child: CustomTextFormField(),
             ),
           ),
         ),

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:slash_task/core/utils/images_paths.dart';
 
 final TextEditingController controller = TextEditingController();
-class CustomTextFormFiled extends StatelessWidget {
-    const CustomTextFormFiled({
+
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({
     super.key,
   });
   @override

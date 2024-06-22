@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:slash_task/features/home/data/models/dummy%20data%20models/dummyDataModel.dart';
+import '../../../data/models/dummy data models/dummy_data_model.dart';
 import 'custom_product_item.dart';
 
-Widget buildProductSection(DummyData data, String categoryKind) {
+Widget buildProductSection(DummyData data, String categoryKind, {double? padding , required int itemCount} ) {
   return Padding(
-    padding: const EdgeInsets.only(left: 24, right: 12),
+    padding: EdgeInsets.only(
+      left: padding ?? 24,
+      right: padding ?? 12,
+    ),
     child: SizedBox(
       height: 170,
       width: double.maxFinite,
@@ -15,14 +18,14 @@ Widget buildProductSection(DummyData data, String categoryKind) {
             width: 12,
           );
         },
-        itemCount: 5,
+        itemCount: itemCount,
         itemBuilder: (context, index) {
           if (categoryKind == "Best Selling") {
-            return productItem(data.bestSelling[index]);
+            return productItem(data.bestSelling[index % 5]);
           } else if (categoryKind == "New Arrival") {
-            return productItem(data.newArrival[index]);
+            return productItem(data.newArrival[index % 5]);
           } else if (categoryKind == "RecommendedForYou") {
-            return productItem(data.recommendedForYou[index]);
+            return productItem(data.recommendedForYou[index % 5]);
           }
           return null;
         },

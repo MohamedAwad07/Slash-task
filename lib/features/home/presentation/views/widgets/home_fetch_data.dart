@@ -1,11 +1,13 @@
 import 'package:error_message/error_message.dart';
 import 'package:flutter/material.dart';
-import '../../../data/models/dummy data models/dummyDataModel.dart';
-import 'home_page_body.dart';
+import '../../../data/models/dummy data models/dummy_data_model.dart';
+import 'home_page_body_mobile.dart';
+import 'home_page_body_web.dart';
 
 class HomeFetchData extends StatelessWidget {
-  const HomeFetchData({super.key});
-
+  const HomeFetchData({super.key, required this.padding, required this.web});
+  final double padding;
+  final bool web;
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
@@ -25,7 +27,7 @@ class HomeFetchData extends StatelessWidget {
             ),
           );
         } else if (snapshot.hasData) {
-          return homePageBody(context, snapshot.data);
+          return web ? homePageBodyWeb(context, snapshot.data, padding: padding) : homePageBodyMobile(context, snapshot.data, padding: padding);
         } else {
           return const Center(child: Text('No data found'));
         }

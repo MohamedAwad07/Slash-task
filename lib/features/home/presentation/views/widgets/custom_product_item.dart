@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/images_paths.dart';
-import '../../../data/models/dummy data models/dummyDataModel.dart';
+import '../../../data/models/dummy data models/dummy_data_model.dart';
 import 'custom_image.dart';
 
 Widget productItem(Product products) {

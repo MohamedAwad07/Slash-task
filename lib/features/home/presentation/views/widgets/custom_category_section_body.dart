@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:slash_task/features/home/data/models/category_section_model.dart';
+import '../../../data/models/category_section_model.dart';
 import 'custom_category_item.dart';
 
-Widget buildCategorySection() {
+Widget buildCategorySection({double? padding , required int itemCount}) {
   return Padding(
-    padding: const EdgeInsets.only(
-      left: 24,
-      right: 12,
+    padding: EdgeInsets.only(
+      left: padding ?? 24,
+      right: padding ?? 12,
     ),
     child: SizedBox(
       height: 100,
@@ -18,9 +18,9 @@ Widget buildCategorySection() {
             width: 8,
           );
         },
-        itemCount: categorySectionList.length,
+        itemCount: itemCount,
         itemBuilder: (context, index) {
-          return categoryItem(imagePath: categorySectionList[index].imagePath, label: categorySectionList[index].label);
+          return categoryItem(imagePath: categorySectionList[index % 6].imagePath, label: categorySectionList[index % 6].label);
         },
       ),
     ),

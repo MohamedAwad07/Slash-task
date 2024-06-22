@@ -9,11 +9,23 @@ class HomePageCubit extends Cubit<HomePageCubitState> {
   HomePageCubit() : super(HomePageCubitInitial());
 
   static HomePageCubit get(context) => BlocProvider.of(context);
-
   int selectedIndex = 0;
   int currentHotDealIndex = 0;
-  List<Widget> currentScreen = [
-    const HomeFetchData(),
+  List<Widget> currentMobileScreen = [
+    const HomeFetchData(padding: 0, web: false),
+    const DefaultWidget(
+      content: 'Favorite Section',
+    ),
+    const DefaultWidget(
+      content: 'My Cart Section',
+    ),
+    const DefaultWidget(
+      content: 'Profile Section',
+    ),
+  ];
+
+  List<Widget> currentWebScreen = [
+    const HomeFetchData(padding: 30, web: true),
     const DefaultWidget(
       content: 'Favorite Section',
     ),
@@ -29,7 +41,7 @@ class HomePageCubit extends Cubit<HomePageCubitState> {
     emit(BottomNavBarChangeState());
   }
 
-    List<String> hotDealImagePaths = [
+  List<String> hotDealImagePaths = [
     ImagePaths.hotDeal1,
     ImagePaths.hotDeal2,
   ];

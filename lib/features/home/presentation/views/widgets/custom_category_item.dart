@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:slash_task/features/home/presentation/views/widgets/custom_image.dart';
+import 'custom_image.dart';
+
 
 Widget categoryItem({required String label, required String imagePath}) {
   return Column(

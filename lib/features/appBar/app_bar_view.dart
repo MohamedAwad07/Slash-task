@@ -4,8 +4,9 @@ import 'presentation/views/widgets/custom_app_bar.dart';
 import 'presentation/views/widgets/custom_app_bar_image.dart';
 import 'presentation/views/widgets/custom_app_bar_title.dart';
 
-PreferredSizeWidget buildAppBar(BuildContext context) {
+PreferredSizeWidget buildAppBar(BuildContext context , double padding) {
   return CustomAppBar(
+    padding: padding,
     title: Padding(
       padding: const EdgeInsets.only(left: 24, right: 24),
       child: Row(

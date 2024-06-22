@@ -7,8 +7,8 @@ import '../../view_model/cubit/home_page_cubit_state.dart';
 import 'hot_deal_item.dart';
 
 class HotDealsSection extends StatelessWidget {
-  const HotDealsSection({super.key});
-
+  const HotDealsSection({super.key, required this.padding});
+  final double padding;
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<HomePageCubit, HomePageCubitState>(
@@ -17,15 +17,18 @@ class HotDealsSection extends StatelessWidget {
         HomePageCubit cubit = HomePageCubit.get(context);
         List<String> hotDealImagePaths = cubit.hotDealImagePaths;
         return Padding(
-          padding: const EdgeInsets.only(right: 30, left: 24),
+          padding: EdgeInsets.only(
+            right: padding + 30,
+            left: padding + 24,
+          ),
           child: Column(
             children: [
               CarouselSlider.builder(
                 options: CarouselOptions(
-                  height: 132,
+                  height: MediaQuery.of(context).size.width * 0.4,
                   initialPage: 0,
                   autoPlay: true,
-                  viewportFraction: 1.08,
+                  viewportFraction: 1.05,
                   enableInfiniteScroll: false,
                   scrollDirection: Axis.horizontal,
                   onPageChanged: (index, reason) {

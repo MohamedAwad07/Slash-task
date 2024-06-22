@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../appBar/app_bar_view.dart';
 import 'presentation/view_model/cubit/home_page_cubit_cubit.dart';
 import 'presentation/view_model/cubit/home_page_cubit_state.dart';
-import 'presentation/views/widgets/custom_bottom_bar.dart';
+import 'presentation/views/widgets/responsive_layout.dart';
+import 'presentation/views/widgets/mobile_layout.dart';
+import 'presentation/views/widgets/web_layout.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,13 +16,9 @@ class HomePage extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           HomePageCubit cubit = HomePageCubit.get(context);
-          return Scaffold(
-            resizeToAvoidBottomInset: false,
-            appBar: buildAppBar(context),
-            body: cubit.currentScreen[cubit.selectedIndex],
-            bottomNavigationBar: CustomBottomBar(
-              cubit: cubit,
-            ),
+          return ResponsiveLayout(
+            mobileLayout: (context) => MobileLayout(cubit: cubit),
+            webLayout: (context) => WebLayout(cubit: cubit),
           );
         },
       ),
