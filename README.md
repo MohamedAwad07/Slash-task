@@ -6,67 +6,63 @@ A new Flutter project.
 
 Slash home page management utilizes the following:
 
-• MVVM pattern
-• Bloc & Cubit for state management
-• Dio package for API services
-• Responsive design for both mobile and web platforms
-
-#files structure
-
-Slash-task/
-├── android/
-├── ios/
-├── assets/
-│   ├── fonts/
-│   ├── images/
-├── lib/
-│   ├── core/
-│   │   ├── errors/
-│   │   │   ├── failures.dart
-│   │   ├── utils/
-│   │   │   ├── images_paths.dart
-│   │   ├── routes/
-│   │   │   ├── app_routes.dart
-│   │   ├── theme/
-│   │       ├── app_theme.dart
-│   ├── features/
-│   │   ├── appBar/
-│   │   │   ├── data/
-│   │   │   │   ├── models/
-│   │   │   ├── presentation/
-│   │   │   │   ├── views/
-│   │   │   │   │   ├── app_bar_view.dart
-│   │   │   │   ├── widgets/
-│   │   │   │   │   ├── custom_app_bar.dart
-│   │   │   │   ├── view_models/
-│   │   ├── home/
-│   │   │   ├── data/
-│   │   │   │   ├── models/
-│   │   │   │   │   ├── dummy_data_model.dart
-│   │   │   │   │   ├── bottom_bar_model.dart
-│   │   │   │   │   ├── category_section_model.dart
-│   │   │   ├── presentation/
-│   │   │   │   ├── views/
-│   │   │   │   │   ├── app_bar_view.dart
-│   │   │   │   ├── widgets/
-│   │   │   │   │   ├── hold_relative_widgets
-│   │   │   │   ├── view_models/
-│   │   │   │       ├── home_cubit.dart
-│   │   │   │       ├── home_states.dart
-│   ├── main.dart
-│   ├── observer.dart
-├── test/
-│   ├── core/
-│   ├── features/
-│   │   ├── appBar/
-│   │   │   ├── data/
-│   │   │   │   ├── models/
-│   │   │   ├── presentation/
-│   │   │   │   ├── views/
-│   │   │   │   ├── widgets/
-│   │   │   │   ├── view_models/
-├── pubspec.yaml
-
+• MVVM pattern <br>
+• Bloc & Cubit for state management <br>
+• Dio package for API services <br>
+• Responsive design for both mobile and web <br> platforms
+Slash-task/ <br>
+├── android/<br>
+├── ios/<br>
+├── assets/<br>
+│   ├── fonts/<br>
+│   ├── images/<br>
+├── lib/<br>
+│   ├── core/<br>
+│   │   ├── errors/<br>
+│   │   │   ├── failures.dart<br>
+│   │   ├── utils/<br>
+│   │   │   ├── images_paths.dart<br>
+│   │   ├── routes/<br>
+│   │   │   ├── app_routes.dart<br>
+│   │   ├── theme/<br>
+│   │       ├── app_theme.dart<br>
+│   ├── features/<br>
+│   │   ├── appBar/<br>
+│   │   │   ├── data/<br>
+│   │   │   │   ├── models/<br>
+│   │   │   ├── presentation/<br>
+│   │   │   │   ├── views/<br>
+│   │   │   │   │   ├── app_bar_view.dart<br>
+│   │   │   │   ├── widgets/<br>
+│   │   │   │   │   ├── custom_app_bar.dart<br>
+│   │   │   │   ├── view_models/<br>
+│   │   ├── home/<br>
+│   │   │   ├── data/<br>
+│   │   │   │   ├── models/<br>
+│   │   │   │   │   ├── dummy_data_model.dart<br>
+│   │   │   │   │   ├── bottom_bar_model.dart<br>
+│   │   │   │   │   ├── category_section_model.dart<br>
+│   │   │   ├── presentation/<br>
+│   │   │   │   ├── views/<br>
+│   │   │   │   │   ├── app_bar_view.dart<br>
+│   │   │   │   ├── widgets/<br>
+│   │   │   │   │   ├── hold_relative_widgets<br>
+│   │   │   │   ├── view_models/<br>
+│   │   │   │       ├── home_cubit.dart<br>
+│   │   │   │       ├── home_states.dart<br>
+│   ├── main.dart<br>
+│   ├── observer.dart<br>
+├── test/<br>
+│   ├── core/<br>
+│   ├── features/<br>
+│   │   ├── appBar/<br>
+│   │   │   ├── data/<br>
+│   │   │   │   ├── models/<br>
+│   │   │   ├── presentation/<br>
+│   │   │   │   ├── views/<br>
+│   │   │   │   ├── widgets/<br>
+│   │   │   │   ├── view_models/<br>
+├── pubspec.yaml<br>
 
 #Breakpoints
 
